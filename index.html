@@ -87,7 +87,7 @@
       <li><a rel="main" href="">HOME</a></li>
       <li><a rel="eventsCal" href="">EVENTS</a></li>
       <li><a href="register.html">LOGIN</a></li>
-      <li><a href="getStaged.html">GET STAGED</a></li>
+      <li><a rel="getStaged" href="">GET STAGED</a></li>
     </ul>
     </nav>
 
@@ -224,9 +224,28 @@
        </div>
      </div>
   </div>
+    <div class="getStaged">
 
 
+<h1>Get Staged</h1>
 
+  <h2>fill it out</h2>
+
+    <form class="getStagedForm" action="index.html" method="post">
+      <input type="text" name="bandName"><br>Band Name<br>
+      <input type="text" name="bandWebsite"><br>Band Website<br>
+      <input type="text" name="eventDate"><br>Event Date<br>
+      <input type="text" name="eventTime"><br>Even Time<br>
+      <input type="text" name="eventVenue"><br>Venue<br>
+      <input type="text" name="buyTickets"><br>Link to Purchase Tickets<br>
+      <button type="submit" value="">Submit</button>
+    </form>
+
+<script type="text/javascript" src="node_modules/moment/moment.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
+<script type="text/javascript" src="getStaged.js"></script>
+  </div>
 
   </div>
 
