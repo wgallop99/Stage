@@ -4,42 +4,106 @@
  <meta charset="UTF-8">
  <title>Events</title>
 <!-- template for displaying by date -->
+  <link rel="stylesheet" href="css/styles.css">
   <script type="template/html" id="eventDateTmpl">
-   <% _each.(event_data, function (element,index,list){
+   <% _.each(event_data, function (element,index,list){ %>
        <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
+        <li><h3> <%= element.artists[0].name %> </h3></li>
+        <li> <%= element.datetime %> </li>
+        <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+        <li> <%= element.venue.name %> </li>
+        <li> <%= element.venue.url %> </li>
        </ul>
 
    <% }); %>
 
   </script>
-  <!-- template for displaying by location. will have to write some sort of if statement to have the location selected match location in our data. then only display information with that location. -->
-  <!-- if "user picked location" matches "data location" then run loop to display info? -->
-  <script type="template/html" id="eventLocationTmpl">
-   <% _each.(event_data, function (element,index,list){
-       <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
-       </ul>
+  <script type="template/html" id="charlestonTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "Charleston"){ %>
 
-   <% }); %>
+
+   <% } %>
+ <% }); %>
   </script>
 </head>
  <body>
   <header>
 <!-- use same header from home page? -->
   </header>
+    <div class="calendar">
+      <table border="1" style="width: 1020px">
+      <tr>
+        <td colspan="7" align="center">AUGUST</td>
+      </tr>
+      <tr>
+        <td align="center" colspan="7">YOUR SHOWS FOR THIS MONTH</td>
+      </tr>
+      <tr align="center">
+        <td>SUNDAY</td>
+        <td>MONDAY</td>
+        <td>TUESDAY</td>
+        <td>WEDNESDAY</td>
+        <td>THURSDAY</td>
+        <td>FRIDAY</td>
+        <td>SATURDAY</td>
+      </tr>
+      <tr class="days">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr class="days">
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr class="days">
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+      <tr class="days">
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+      </tr>
+      <tr class="days ">
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+      </tr>
+      <tr class="days">
+        <td>31</td>
+      </tr>
+      </table>
+    </div>
     <div id="bigContain">
      <div class="navBar">
-      <a href="">Date</a>
-      <a href="">Location</a>
+      <a href="">All</a>
+      <a href="">Charleston</a>
+      <a href="">Mount Pleasant</a>
+      <a href="">North Charleston</a>
      </div>
       <div class="eventDisplay">
   <!-- where events will be displayed -->
@@ -54,6 +118,6 @@
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="data.js"></script>
-<script src="script.js"></script>
+<script src="events.js"></script>
  </body>
 </html>

@@ -41,6 +41,7 @@ header{
   }
 }
 
+
 .container{
   width: 980px;
   margin: auto;
@@ -97,6 +98,23 @@ aside{
     line-height: 55px;
     color: black;
   }
+  h3{
+    font-weight: bold;
+    color: #4298b5;
+    margin: 0;
+    padding-top: 10px;
+  }
+  ul{
+    list-style-type: none;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    margin: 0;
+    border-bottom: 1px solid rgb(228, 228, 228);
+  }
+  li{
+    font-weight: 200;
+  }
+
 }
 
 footer{
@@ -122,4 +140,18 @@ footer{
       color: white;
     }
   }
+}
+
+.calendar {
+
+  td, th {
+    width: 10%;
+  }
+
+  .days td, .days th {
+    padding-bottom: 50px;
+    font-size: 13px;
+
+  }
+
 }

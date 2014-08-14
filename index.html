@@ -12,9 +12,9 @@
     <% if(moment(element.datetime).utc().format().substring(0,10) == moment.utc().format().substring(0,10)) { %>
         <h3><%= element.artists[0].name %></h3>
         <ul>
-         <li>AREA: <%= element.venue.city %>, <%= element.venue.region %> </li>
-         <li>VENUE: <%= element.venue.name %> </li>
-         <li>TIME: <%= moment(element.datetime).format('h:mm a') %></li>
+         <li><span style="color:black;">AREA:</span> <%= element.venue.city %>, <%= element.venue.region %> </li>
+         <li><span style="color:black;">VENUE:</span> <%= element.venue.name %> </li>
+         <li><span style="color:black;">TIME:</span> <%= moment(element.datetime).format('h:mm a') %></li>
         </ul>
     <% } %>
 <% }); %>
@@ -70,7 +70,9 @@
     <aside>
 
       <div class="tonightEvents">
+
         <h2><span style="color: #4298b5; letter-spacing:-5px;">>></span> ON STAGE TONIGHT</h2>
+
 
       </div>
 
@@ -91,9 +93,10 @@
 
 
   </footer>
+
 <script type="text/javascript" src="node_modules/moment/moment.js"></script>
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
