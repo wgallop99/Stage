@@ -179,3 +179,38 @@ footer{
     }
   }
 }
+
+.calendar {
+
+  table {
+    background-color: white;
+  }
+
+  tr {
+    color: grey;
+  }
+
+  tr:hover {
+    color: black;
+    cursor: default;
+  }
+
+  td, th {
+    width: 10%;
+  }
+
+  td:hover, th:hover {
+    background-color: #4298b5;
+  }
+
+  td:hover {
+    color: black;
+
+  }
+
+  .days td, .days th {
+    padding-bottom: 50px;
+    font-size: 13px;
+  }
+
+}
