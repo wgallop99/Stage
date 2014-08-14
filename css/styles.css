@@ -94,8 +94,6 @@ aside {
     border-bottom: 1px solid #e4e4e4; }
   aside li {
     font-weight: 200; }
-<<<<<<< HEAD
-=======
 
 .calendar td, .calendar th {
   width: 10%; }
@@ -108,7 +106,6 @@ aside {
 
 .currentTab {
   display: block; }
->>>>>>> 7900bc2deccf3b1ee9d141a1d7fe1221ffc3c5d4
 
 footer {
   position: relative;
