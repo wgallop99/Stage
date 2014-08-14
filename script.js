@@ -10,6 +10,7 @@ $(document).ready(function() {
 
       initStyling: function() {
         home.renderTextSide($(".tonightEvents"));
+        home.renderEventDisplay($(".eventDisplay"));
       },
 
       initEvents: function() {},
@@ -26,17 +27,17 @@ $(document).ready(function() {
 
       },
 
-
+      renderEventDisplay: function($target){
+        home.render($("#eventDateTmpl").html(), event_data, $target);
+      },
     }
 
-    // $(".mainNav a").on("click", function(event){
-    //   event.preventDefault();
-    //   var navigated = "." + $(this).attr("rel");
-    //   $(".mainInfo").children().removeClass("currentTab");
-    //   $(navigated).addClass("currentTab");
-    //   $(this).closest('li').addClass("active");
-    //   $(this).closest('li').siblings().removeClass("active");
-    // });
+    $(".topNav a").on("click", function(event){
+      event.preventDefault();
+      var navigated = "." + $(this).attr("rel");
+      $(".container").children().removeClass("currentTab");
+      $(navigated).addClass("currentTab");
+    });
 
 
 

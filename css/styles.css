@@ -94,6 +94,21 @@ aside {
     border-bottom: 1px solid #e4e4e4; }
   aside li {
     font-weight: 200; }
+<<<<<<< HEAD
+=======
+
+.calendar td, .calendar th {
+  width: 10%; }
+.calendar .days td, .calendar .days th {
+  padding-bottom: 50px;
+  font-size: 13px; }
+
+.main, .eventsCal {
+  display: none; }
+
+.currentTab {
+  display: block; }
+>>>>>>> 7900bc2deccf3b1ee9d141a1d7fe1221ffc3c5d4
 
 footer {
   position: relative;
@@ -112,9 +127,3 @@ footer {
       transition: all 1s ease; }
     footer li a:hover {
       color: white; }
-
-.calendar td, .calendar th {
-  width: 10%; }
-.calendar .days td, .calendar .days th {
-  padding-bottom: 50px;
-  font-size: 13px; }
