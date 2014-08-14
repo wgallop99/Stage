@@ -131,10 +131,13 @@ footer{
     width: 10%;
   }
 
+  td:hover{
+    color: red;
+  }
+
   .days td, .days th {
     padding-bottom: 50px;
     font-size: 13px;
-
   }
 
 }
