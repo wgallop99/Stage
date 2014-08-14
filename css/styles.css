@@ -130,3 +130,20 @@ footer {
       transition: all 1s ease; }
     footer li a:hover {
       color: white; }
+
+.calendar table {
+  background-color: white; }
+.calendar tr {
+  color: grey; }
+.calendar tr:hover {
+  color: black;
+  cursor: default; }
+.calendar td, .calendar th {
+  width: 10%; }
+.calendar td:hover, .calendar th:hover {
+  background-color: #4298b5; }
+.calendar td:hover {
+  color: black; }
+.calendar .days td, .calendar .days th {
+  padding-bottom: 50px;
+  font-size: 13px; }
