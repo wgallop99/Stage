@@ -1,3 +1,8 @@
+$greyText = #7f7f7f;
+$blueText = #4298b5;
+$borderColor = rgb(228, 228, 228);
+
+
 body{
   margin:0;
   font-family: 'Raleway';
@@ -69,10 +74,10 @@ header{
     padding-right: 15px;
     padding-left: 15px;
     background-color: white;
-    border: 1px solid rgb(228, 228, 228);
+    border: 1px solid $borderColor;
     line-height: 24px;
     box-shadow: 0 5px 6px -6px grey;
-    color: #7f7f7f;
+    color: $greyText;
   }
 }
 
@@ -83,10 +88,10 @@ aside{
   padding-left: 15px;
   padding-right: 15px;
   background-color: white;
-  border: 1px solid rgb(228, 228, 228);
+  border: 1px solid $borderColor;
   line-height: 24px;
   box-shadow: 0 5px 6px -6px grey;
-  color: #7f7f7f;
+  color: $greyText;
   .dateTag{
     color: white;
     text-align: center;
@@ -100,7 +105,7 @@ aside{
   }
   h3{
     font-weight: bold;
-    color: #4298b5;
+    color: $blueText;
     margin: 0;
     padding-top: 10px;
   }
@@ -109,7 +114,7 @@ aside{
     padding-bottom: 20px;
     padding-left: 18px;
     margin: 0;
-    border-bottom: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid $borderColor;
   }
   li{
     font-weight: 200;
@@ -118,7 +123,7 @@ aside{
 }
 
 .calendar {
-
+  background-color: white;
   td, th {
     width: 10%;
   }
@@ -126,7 +131,6 @@ aside{
   .days td, .days th {
     padding-bottom: 50px;
     font-size: 13px;
-
   }
 
 }
@@ -140,16 +144,15 @@ aside{
 }
 
 .eventDisplay {
-
-.alltab, .charlestonTab, .mountPTab, .nCharlesTab{
- display: none;
-}
+  .alltab, .charlestonTab, .mountPTab, .nCharlesTab{
+   display: none;
+  }
 }
 
 .eventDisplay{
-.activeTab{
- display:block;
-}
+  .activeTab{
+   display:block;
+  }
 }
 
 footer{
