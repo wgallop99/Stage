@@ -21,6 +21,7 @@
 </script>
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
+
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
       <li> <%= element.datetime %> </li>
@@ -33,20 +34,22 @@
 </script>
 <script type="template/html" id="charlestonTmpl">
  <% _.each(event_data, function (element,index,list){ %>
- <% if(element.city === "Charleston"){ %>
+
+ <% if(element.venue.city === "Charleston"){ %>
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
-
  <% } %>
+
 <% }); %>
 </script>
 <script type="template/html" id="mountpTmpl">
  <% _.each(event_data, function (element,index,list){ %>
- <% if(element.city === "Mount Pleasant"){ %>
+
+ <% if(element.venue.city === "Mount Pleasant"){ %>
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
@@ -55,11 +58,13 @@
    </ul>
 
  <% } %>
+
 <% }); %>
 </script>
 <script type="template/html" id="northCharTmpl">
  <% _.each(event_data, function (element,index,list){ %>
- <% if(element.city === "North Charleston"){ %>
+
+ <% if(element.venue.city === "North Charleston"){ %>
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
@@ -68,6 +73,7 @@
    </ul>
 
  <% } %>
+
 <% }); %>
 </script>
 </head>
@@ -202,13 +208,18 @@
      </div>
      <div id="bigContain">
       <div class="navBar">
-       <a href="">All</a>
-       <a href="">Charleston</a>
-       <a href="">Mount Pleasant</a>
-       <a href="">North Charleston</a>
+       <a rel="alltab" href="">All</a>
+       <a rel="charlestonTab" href="">Charleston</a>
+       <a rel="mountPTab" href="">Mount Pleasant</a>
+       <a rel="nCharlesTab" href="">North Charleston</a>
       </div>
        <div class="eventDisplay">
-   <!-- where events will be displayed -->
+        <div class="alltab activeTab"></div>
+        <div class="charlestonTab"></div>
+        <div class="mountPTab"></div>
+        <div class="nCharlesTab"></div>
+
+
        </div>
      </div>
   </div>
