@@ -41,6 +41,7 @@ header{
   }
 }
 
+
 .container{
   width: 980px;
   margin: auto;
@@ -122,4 +123,18 @@ footer{
       color: white;
     }
   }
+}
+
+.calendar {
+
+  td, th {
+    width: 10%;
+  }
+
+  .days td, .days th {
+    padding-bottom: 50px;
+    font-size: 13px;
+
+  }
+
 }
