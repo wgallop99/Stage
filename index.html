@@ -3,76 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <title>Stage</title>
 
 <!--  COMMENTED OUT TEMPLATE FOR POTENTIAL SIDEBAR CONTENT (??)-->
-<!--   <script type="template/html" id="eventDateTmpl">
-  <% _each.(event_data, function (element,index,list){
-
-      <h3>ON STAGE TONIGHT</h3>
-
-  //NEED TO FIX THIS IF STATEMENT TO WORK WITH MOMENT//
-      <% if(moment(element.datetime) == moment()) { %>
+<script type="template/html" id="eventSideTmpl">
+  <% _.each(event_data, function (element,index,list){ %>
+    <% if(moment(element.datetime) == moment()) { %>
         <ul>
-         <li><h3> <% "artist.name" %> </h3></li>
-         <li> <% "venue.city" + "," + "venue.region" %> </li>
-         <li> <% "venue.name" %> </li>
-         <li> <% "venue.url" %> </li>
+         <li><h4> <%= element.artists[0].name %> </h4></li>
+         <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+         <li> <%= element.venue.name %> </li>
+         <li><a href="<%=element.venue.url %>"><%= element.venue.url %></a></li>
         </ul>
-      <% } %>
-  <% }); %>
-</script> -->
+    <% } %>
+<% }); %>
+</script>
 
 </head>
+
 <body>
 
+
   <header>
-    <ul id="main_nav">
+    <nav class="topNav">
+    <ul>
       <li><a href="home.html">HOME</a></li>
       <li><a href="events.html">EVENTS</a></li>
       <li><a href="register.html">GET STAGED</a></li>
     </ul>
+    </nav>
 
-    <h1>STAGE</h1>
+    <img src="images/stageLogo.png" alt="STAGE">
 
   </header>
+
   <div class="container">
 
     <div class="Blog">
-
-   </div>
-
-
       <section class="blogpost">
-          <h2>Shovels and Rope Count Down to "Swimmin' Time"</h2>
+          <h2><img style="width:35px; padding-right: 7px;" src="images/micIcon.png" alt="mic">SHOVELS & ROPE</h2>
+          <h3>Count Down to "Swimmin' Time"</h3>
             <p>
             Husband and wife duo Shovels and Rope have had what could be called the summer of their career, leading up to the release of their second record, 'Swimmin Time,' later this month. This will be their first full album since 2008, when the two came together for what was supposed to be a one-time act. They spend the past few months hopping around the States headlining mega festivals like Austin City Limits and Bonnaroo, and joined fellow folk masters The Avett Brothers on the final day of a sold-out, three-day stint at Red Rocks Ampitheatre. This whirlwind  tour has proven to be golden for 'Swimmin Time,' whose pre-release sales have ballooned with each performance. The record goes on sale officially on August 26. Preorder it <a href="http://www.shovelsandrope.com/" alt="Shovels and Rope">here</a>.</p>
             </p>
       </section>
 
       <section class="blogpost">
-          <h2>Post Title</h2>
+          <h2><img style="width:35px; padding-right: 7px;" src="images/micIcon.png" alt="mic">Post Title</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
       </section>
 
       <section class="blogpost">
-          <h2>Post Title</h2>
+          <h2><img style="width:35px; padding-right: 7px;" src="images/micIcon.png" alt="mic">Post Title</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
       </section>
-
+</div>
 
     </div>
 
     <aside>
-<!--FILLER CONTENT FOR SIDEBAR-->
+
       <div class="tonightEvents">
-        <h3>ON STAGE TONIGHT</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus unde voluptates, modi eaque praesentium maiores eum vitae amet id laboriosam, quibusdam possimus vero ex fuga consectetur placeat dolores rerum nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa omnis incidunt, accusantium. Unde voluptates quisquam a, iusto. Rem dolor minus earum ratione deleniti excepturi tempora, ullam sit impedit deserunt.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, distinctio. Porro nisi sapiente eum, debitis numquam esse nemo impedit, suscipit maiores vitae, natus possimus doloremque. Tempore delectus a sunt culpa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsa numquam aliquam sequi, est laudantium! Commodi obcaecati, repellat laborum eos, deleniti animi excepturi mollitia earum qui aperiam velit, dicta! Animi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt rem aut placeat voluptatem, tenetur aspernatur ea debitis, dolorem, ipsum rerum quae ducimus, earum facilis beatae nam laudantium quod eligendi minus.</p>
+        <h2><span style="color: #4298b5; letter-spacing:-5px;">>></span>ON STAGE TONIGHT</h2>
+
+<!--         <h3>ON STAGE TONIGHT</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus unde voluptates, modi eaque praesentium maiores eum vitae amet id laboriosam, quibusdam possimus vero ex fuga consectetur placeat dolores rerum nisi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa omnis incidunt, accusantium. Unde voluptates quisquam a, iusto. Rem dolor minus earum ratione deleniti excepturi tempora, ullam sit impedit deserunt.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, distinctio. Porro nisi sapiente eum, debitis numquam esse nemo impedit, suscipit maiores vitae, natus possimus doloremque. Tempore delectus a sunt culpa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsa numquam aliquam sequi, est laudantium! Commodi obcaecati, repellat laborum eos, deleniti animi excepturi mollitia earum qui aperiam velit, dicta! Animi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt rem aut placeat voluptatem, tenetur aspernatur ea debitis, dolorem, ipsum rerum quae ducimus, earum facilis beatae nam laudantium quod eligendi minus.</p> -->
       </div>
 
     </aside>
@@ -92,11 +93,12 @@
 
 
   </footer>
-
+<script type="text/javascript" src="node_modules/moment/moment.js"></script>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="script.js"></script>
+
 
 </body>
 </html>
