@@ -95,6 +95,18 @@ aside {
   aside li {
     font-weight: 200; }
 
+.calendar td, .calendar th {
+  width: 10%; }
+.calendar .days td, .calendar .days th {
+  padding-bottom: 50px;
+  font-size: 13px; }
+
+.main, .eventsCal {
+  display: none; }
+
+.currentTab {
+  display: block; }
+
 footer {
   position: relative;
   display: block;
@@ -112,9 +124,3 @@ footer {
       transition: all 1s ease; }
     footer li a:hover {
       color: white; }
-
-.calendar td, .calendar th {
-  width: 10%; }
-.calendar .days td, .calendar .days th {
-  padding-bottom: 50px;
-  font-size: 13px; }
