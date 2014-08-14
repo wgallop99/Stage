@@ -12,7 +12,6 @@
         <li> <%= element.datetime %> </li>
         <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
         <li> <%= element.venue.name %> </li>
-        <li> <%= element.venue.url %> </li>
        </ul>
 
    <% }); %>
@@ -21,7 +20,38 @@
   <script type="template/html" id="charlestonTmpl">
    <% _.each(event_data, function (element,index,list){ %>
    <% if(element.city === "Charleston"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
 
+   <% } %>
+ <% }); %>
+  </script>
+  <script type="template/html" id="mountpTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "Mount Pleasant"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
+
+   <% } %>
+ <% }); %>
+  </script>
+  <script type="template/html" id="northCharTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "North Charleston"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
 
    <% } %>
  <% }); %>
@@ -107,9 +137,6 @@
      </div>
       <div class="eventDisplay">
   <!-- where events will be displayed -->
-      </div>
-      <div class="calendarDisplay">
-       <!-- where calendar will be displayed -->
       </div>
     </div>
   <footer>
