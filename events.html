@@ -8,7 +8,7 @@
    <% _.each(event_data, function (element,index,list){ %>
        <ul>
         <li> <%= element.datetime %> </li>
-        <li><h3> <%= element.artists.name %> </h3></li>
+        <li><h3> <%= element.artists[0].name %> </h3></li>
         <li> <%= element.venue.city %> , <%= element.venue.region %> </li>
         <li> <%= element.venue.name %> </li>
         <li> <%= element.venue.url %> </li>
