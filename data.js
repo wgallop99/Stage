@@ -1,17 +1,23 @@
 var event_data = [
    {
       "artists": [
-         {
-            "url": "http://www.bandsintown.com/ChrisBoone",
-            "name": "Chris Boone",
-            "mbid": null
-         }
-      ],
+          {
+             "url": "http://www.bandsintown.com/ChrisBoone",
+             "name": "Chris Boone",
+             "mbid": null
+           }
+         ],
+
       "url": "http://www.bandsintown.com/event/8281697?app_id=rageCake",
+
       "id": 8281697,
+
       "on_sale_datetime": null,
-      "ticket_url": "http://www.bandsintown.com/event/8281697/buy_tickets?app_id=rageCake",
+
+      "ticket_url":   "http://www.bandsintown.com/event/8281697/buy_tickets?app_id=rageCake",
+
       "datetime": "2014-08-13T19:00:00",
+
       "venue": {
          "latitude": 32.7784996,
          "url": "http://www.bandsintown.com/venue/2107235",
@@ -22,8 +28,10 @@ var event_data = [
          "country": "United States",
          "name": "Southside 17"
       },
+
       "ticket_status": "unavailable"
    },
+
    {
       "artists": [
          {

@@ -6,31 +6,55 @@
 <!-- template for displaying by date -->
   <link rel="stylesheet" href="css/styles.css">
   <script type="template/html" id="eventDateTmpl">
-   <% _each.(event_data, function (element,index,list){
+   <% _.each(event_data, function (element,index,list){ %>
        <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
+        <li><h3> <%= element.artists[0].name %> </h3></li>
+        <li> <%= element.datetime %> </li>
+        <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+        <li> <%= element.venue.name %> </li>
        </ul>
 
    <% }); %>
 
   </script>
-  <!-- template for displaying by location. will have to write some sort of if statement to have the location selected match location in our data. then only display information with that location. -->
-  <!-- if "user picked location" matches "data location" then run loop to display info? -->
-  <script type="template/html" id="eventLocationTmpl">
-   <% _each.(event_data, function (element,index,list){
-       <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
-       </ul>
+  <script type="template/html" id="charlestonTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "Charleston"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
 
-   <% }); %>
+   <% } %>
+ <% }); %>
+  </script>
+  <script type="template/html" id="mountpTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "Mount Pleasant"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
+
+   <% } %>
+ <% }); %>
+  </script>
+  <script type="template/html" id="northCharTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "North Charleston"){ %>
+     <ul>
+      <li><h3> <%= element.artists[0].name %> </h3></li>
+      <li> <%= element.datetime %> </li>
+      <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
+      <li> <%= element.venue.name %> </li>
+     </ul>
+
+   <% } %>
+ <% }); %>
   </script>
 </head>
  <body>
@@ -106,14 +130,13 @@
     </div>
     <div id="bigContain">
      <div class="navBar">
-      <a href="">Date</a>
-      <a href="">Location</a>
+      <a href="">All</a>
+      <a href="">Charleston</a>
+      <a href="">Mount Pleasant</a>
+      <a href="">North Charleston</a>
      </div>
       <div class="eventDisplay">
   <!-- where events will be displayed -->
-      </div>
-      <div class="calendarDisplay">
-       <!-- where calendar will be displayed -->
       </div>
     </div>
   <footer>
@@ -122,6 +145,6 @@
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="data.js"></script>
-<script src="script.js"></script>
+<script src="events.js"></script>
  </body>
 </html>
