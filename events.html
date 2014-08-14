@@ -5,13 +5,13 @@
  <title>Events</title>
 <!-- template for displaying by date -->
   <script type="template/html" id="eventDateTmpl">
-   <% _each.(event_data, function (element,index,list){
+   <% _.each(event_data, function (element,index,list){ %>
        <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
+        <li> <%= element.datetime %> </li>
+        <li><h3> <%= element.artists.name %> </h3></li>
+        <li> <%= element.venue.city %> , <%= element.venue.region %> </li>
+        <li> <%= element.venue.name %> </li>
+        <li> <%= element.venue.url %> </li>
        </ul>
 
    <% }); %>
@@ -22,11 +22,11 @@
   <script type="template/html" id="eventLocationTmpl">
    <% _each.(event_data, function (element,index,list){
        <ul>
-        <li> <% "datetime" %> </li>
-        <li><h3> <% "artist.name" %> </h3></li>
-        <li> <% "venue.city" + "," + "venue.region" %> </li>
-        <li> <% "venue.name" %> </li>
-        <li> <% "venue.url" %> </li>
+        <li> <%= element.datetime %> </li>
+        <li><h3> <%= element.artist[0].name %> </h3></li>
+        <li> <%= element.venue[0].city %> + "," + <%= element.venue[0].region %> </li>
+        <li> <%= element.venue[0].name %> </li>
+        <li> <%= element.venue[0].url %> </li>
        </ul>
 
    <% }); %>
