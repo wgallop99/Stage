@@ -109,6 +109,12 @@ aside {
 .currentTab {
   display: block; }
 
+.eventDisplay .alltab, .eventDisplay .charlestonTab, .eventDisplay .mountPTab, .eventDisplay .nCharlesTab {
+  display: none; }
+
+.eventDisplay .activeTab {
+  display: block; }
+
 footer {
   position: relative;
   display: block;
