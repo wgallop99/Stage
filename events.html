@@ -7,9 +7,9 @@
   <script type="template/html" id="eventDateTmpl">
    <% _.each(event_data, function (element,index,list){ %>
        <ul>
-        <li> <%= element.datetime %> </li>
         <li><h3> <%= element.artists[0].name %> </h3></li>
-        <li> <%= element.venue.city %> , <%= element.venue.region %> </li>
+        <li> <%= element.datetime %> </li>
+        <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
         <li> <%= element.venue.name %> </li>
         <li> <%= element.venue.url %> </li>
        </ul>
@@ -17,19 +17,13 @@
    <% }); %>
 
   </script>
-  <!-- template for displaying by location. will have to write some sort of if statement to have the location selected match location in our data. then only display information with that location. -->
-  <!-- if "user picked location" matches "data location" then run loop to display info? -->
-  <script type="template/html" id="eventLocationTmpl">
-   <% _each.(event_data, function (element,index,list){
-       <ul>
-        <li> <%= element.datetime %> </li>
-        <li><h3> <%= element.artist[0].name %> </h3></li>
-        <li> <%= element.venue[0].city %> + "," + <%= element.venue[0].region %> </li>
-        <li> <%= element.venue[0].name %> </li>
-        <li> <%= element.venue[0].url %> </li>
-       </ul>
+  <script type="template/html" id="charlestonTmpl">
+   <% _.each(event_data, function (element,index,list){ %>
+   <% if(element.city === "Charleston"){ %>
 
-   <% }); %>
+
+   <% } %>
+ <% }); %>
   </script>
 </head>
  <body>
@@ -38,8 +32,10 @@
   </header>
     <div id="bigContain">
      <div class="navBar">
-      <a href="">Date</a>
-      <a href="">Location</a>
+      <a href="">All</a>
+      <a href="">Charleston</a>
+      <a href="">Mount Pleasant</a>
+      <a href="">North Charleston</a>
      </div>
       <div class="eventDisplay">
   <!-- where events will be displayed -->
@@ -54,6 +50,6 @@
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="data.js"></script>
-<script src="script.js"></script>
+<script src="events.js"></script>
  </body>
 </html>
