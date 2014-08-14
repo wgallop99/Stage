@@ -50,3 +50,9 @@ footer {
       transition: all 1s ease; }
     footer li a:hover {
       color: white; }
+
+.calendar td, .calendar th {
+  width: 10%; }
+.calendar .days td, .calendar .days th {
+  padding-bottom: 50px;
+  font-size: 13px; }
