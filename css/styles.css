@@ -103,7 +103,7 @@ aside {
     padding-bottom: 50px;
     font-size: 13px; }
 
-.main, .eventsCal {
+.main, .eventsCal, .getStaged {
   display: none; }
 
 .currentTab {
