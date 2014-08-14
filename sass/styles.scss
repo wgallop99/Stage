@@ -1,28 +1,43 @@
-body {
-  margin: 0;
+body{
+  margin:0;
+  font-family: 'Raleway';
+  background-image: url(../images/pyramid.png);
+  background-attachment: fixed;
 }
 
 header{
-  margin: 0px;
-  #main_nav {
-    margin: 0px;
-    padding-top: 50px;
+  background-image: url(../images/stageBkg.png);
+  width: 100%;
+  position: relative;
+  text-align: center;
+  height: 450px;
+  box-shadow: 0 5px 6px -6px grey;
+  .topNav{
     text-align: center;
 
-    li {
-      display: inline-block;
-      padding-right: 30px;
-
-      a {
-        text-decoration: none;
-        color: black;
-        transition: all 1s ease;
-      }
-
-      a:hover {
-        color: white;
-      }
+    ul{
+      margin: 0;
+      list-style-type: none;
+      width: 100%;
     }
+    li{
+      display: inline-block;
+      padding-top: 25px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      font-weight: 200;
+      font-size: 20px;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+  img{
+    width: 300px;
   }
 }
 
@@ -36,13 +51,52 @@ header{
 .Blog{
   width: 68%;
   float: left;
-  padding-right: 15px;
+  h2{
+    font-size: 45px;
+    color: black;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+  h3{
+    font-size: 35px;
+    color: #4298b5;
+    margin: 10px;
+  }
+  section{
+    margin-top: 16px;
+    margin-right: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: white;
+    border: 1px solid rgb(228, 228, 228);
+    line-height: 24px;
+    box-shadow: 0 5px 6px -6px grey;
+    color: #7f7f7f;
+  }
 }
 
 aside{
+  margin-top: 16px;
   width: 27%;
   float: left;
   padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+  border: 1px solid rgb(228, 228, 228);
+  line-height: 24px;
+  box-shadow: 0 5px 6px -6px grey;
+  color: #7f7f7f;
+  .dateTag{
+    color: white;
+    text-align: center;
+    padding: 6px;
+    background-color: grey;
+  }
+  h2{
+    font-size: 45px;
+    line-height: 55px;
+    color: black;
+  }
 }
 
 footer{
