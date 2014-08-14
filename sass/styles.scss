@@ -117,6 +117,28 @@ aside{
 
 }
 
+.calendar {
+
+  td, th {
+    width: 10%;
+  }
+
+  .days td, .days th {
+    padding-bottom: 50px;
+    font-size: 13px;
+
+  }
+
+}
+
+.main, .eventsCal{
+  display: none;
+}
+
+.currentTab{
+  display: block;
+}
+
 footer{
   position: relative;
   display: block;
@@ -140,18 +162,4 @@ footer{
       color: white;
     }
   }
-}
-
-.calendar {
-
-  td, th {
-    width: 10%;
-  }
-
-  .days td, .days th {
-    padding-bottom: 50px;
-    font-size: 13px;
-
-  }
-
 }
