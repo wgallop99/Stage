@@ -10,7 +10,10 @@ $(document).ready(function() {
 
       initStyling: function() {
         home.renderTextSide($(".tonightEvents"));
-        home.renderEventDisplay($(".eventDisplay"));
+        home.renderEventDisplay($(".alltab"));
+        home.renderTextCharTab($(".charlestonTab"));
+        home.renderTextMountpTab($(".mountPTab"));
+        home.renderTextnCharTab($(".nCharlesTab"));
       },
 
       initEvents: function() {},
@@ -29,6 +32,21 @@ $(document).ready(function() {
 
       renderEventDisplay: function($target){
         home.render($("#eventDateTmpl").html(), event_data, $target);
+
+
+
+      },
+      renderTextCharTab: function($target) {
+        home.render($("#charlestonTmpl").html(),event_data, $target);
+
+      },
+      renderTextMountpTab: function($target) {
+        home.render($("#mountpTmpl").html(),event_data, $target);
+
+      },
+      renderTextnCharTab: function($target) {
+        home.render($("#northCharTmpl").html(), event_data, $target);
+
       },
     }
 
@@ -39,6 +57,12 @@ $(document).ready(function() {
       $(navigated).addClass("currentTab");
     });
 
+    $(".navBar a").on("click", function(event){
+      event.preventDefault();
+      var navigated = "." + $(this).attr("rel");
+      $(".eventDisplay").children().removeClass("activeTab");
+      $(navigated).addClass("activeTab");
+    });
 
 
 home.init();
