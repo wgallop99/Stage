@@ -175,23 +175,40 @@ aside{
 .navBar {
   a{
     color:$greyText;
-    padding-right: 25px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     text-decoration: none;
   }
-  a:hover{
-    color: $blueText;
+  .activeLink{
+    border-top: 1px solid $blueText;
+    border-left: 1px solid $blueText;
+    border-right: 1px solid $blueText;
+    border-bottom: none;
+    margin-bottom: -1px;
+    background-color: $blueText;
+    a{
+      color: white;
+    }
   }
   ul{
     list-style-type: none;
-    border-bottom: 1px solid $blueText;
+    padding:0;
   }
   li{
     display: inline-block;
+    padding: 12px;
+    margin-right: -5px;
     border-bottom: 1px solid $blueText;
   }
 }
 
 .eventDisplay {
+
+  .event_container {
+    margin-bottom: 25px;
+  }
 
   h3 {
     margin: 2px;
@@ -226,7 +243,10 @@ aside{
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+  margin-left: 0px;
 }
+
+
 }
 
 

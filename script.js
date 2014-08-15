@@ -62,12 +62,14 @@ $(document).ready(function() {
       var navigated = "." + $(this).attr("rel");
       $(".eventDisplay").children().removeClass("activeTab");
       $(navigated).addClass("activeTab");
+      $(this).closest('li').addClass("activeLink");
+      $(this).closest('li').siblings().removeClass("activeLink");
     });
     $("#menu a").on("click", function(event){
       event.preventDefault();
       $(".topNav").toggleClass("topNav2");
-
     });
+
 
 
 home.init();

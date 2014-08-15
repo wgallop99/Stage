@@ -20,6 +20,7 @@
 </script>
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
+  <div class="event_container">
 
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
@@ -28,7 +29,7 @@
       <li> <%= element.venue.name %> </li>
      </ul>
      <a class="action-button animate border">Add to Calendar</a>
-
+  </div>
  <% }); %>
 
 </script>
@@ -36,13 +37,15 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Charleston"){ %>
+  <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
-   <button>Add to Calendar</button>
+   <a class="action-button animate border">Add to Calendar</a>
+  </div>
  <% } %>
 
 <% }); %>
@@ -51,13 +54,15 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Mount Pleasant"){ %>
+  <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
-   <button>Add to Calendar</button>
+   <a class="action-button animate border">Add to Calendar</a>
+  </div>
 
  <% } %>
 
@@ -67,13 +72,15 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "North Charleston"){ %>
+  <div class="container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
-   <button>Add to Calendar</button>
+   <a class="action-button animate border">Add to Calendar</a>
+  </div>
 
  <% } %>
 
@@ -135,7 +142,8 @@
 
           <div class="tonightEvents">
 
-            <h2><span style="color: #4298b5; letter-spacing:-5px;">>></span> ON STAGE TONIGHT</h2>
+            <h2><span style="color: #4298b5; letter-spacing:-5px;">
+            </span> ON STAGE TONIGHT</h2>
 
 
           </div>
