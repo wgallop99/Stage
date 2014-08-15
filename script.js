@@ -63,6 +63,11 @@ $(document).ready(function() {
       $(".eventDisplay").children().removeClass("activeTab");
       $(navigated).addClass("activeTab");
     });
+    $("#menu a").on("click", function(event){
+      event.preventDefault();
+      $(".topNav").toggleClass("topNav2");
+
+    });
 
 
 home.init();
