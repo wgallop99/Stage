@@ -182,7 +182,8 @@ aside {
   -webkit-transition: all 0.1s; }
 .eventDisplay .border {
   background-color: #4298b5;
-  border-bottom: 5px solid #26596b; }
+  border-bottom: 5px solid #26596b;
+  margin: 0px; }
 .eventDisplay .action-button:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
