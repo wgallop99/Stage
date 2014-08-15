@@ -95,6 +95,8 @@ aside {
   aside li {
     font-weight: 200; }
 
+.eventDisplay .event_container {
+  margin-bottom: 25px; }
 .eventDisplay h3 {
   margin: 2px; }
 .eventDisplay ul {
@@ -117,7 +119,8 @@ aside {
 .eventDisplay .action-button:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+  margin-left: 0px; }
 
 .calendar {
   background-color: white; }

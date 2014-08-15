@@ -124,6 +124,10 @@ aside{
 
 .eventDisplay {
 
+  .event_container {
+    margin-bottom: 25px;
+  }
+
   h3 {
     margin: 2px;
   }
@@ -157,7 +161,10 @@ aside{
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+  margin-left: 0px;
 }
+
+
 }
 
 
