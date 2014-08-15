@@ -158,6 +158,7 @@ aside{
 
 }
 
+
 .eventsCal{
   width: 980px;
   margin: auto;
@@ -189,6 +190,46 @@ aside{
     border-bottom: 1px solid $blueText;
   }
 }
+
+.eventDisplay {
+
+  h3 {
+    margin: 2px;
+  }
+
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 10px;
+  }
+
+  .animate {
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+  }
+  .border {
+    background-color: $blueText;
+    border-bottom: 5px solid #26596b;
+
+  }
+  .action-button:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+}
+
+
 
 
 .calendar {
