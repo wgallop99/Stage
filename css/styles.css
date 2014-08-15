@@ -95,6 +95,8 @@ aside {
   aside li {
     font-weight: 200; }
 
+.eventDisplay .container {
+  margin-bottom: 10px; }
 .eventDisplay h3 {
   margin: 2px; }
 .eventDisplay ul {

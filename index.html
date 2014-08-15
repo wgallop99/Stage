@@ -21,6 +21,7 @@
 </script>
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
+  <div class="event_container">
 
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
@@ -29,7 +30,7 @@
       <li> <%= element.venue.name %> </li>
      </ul>
      <a class="action-button animate border">Add to Calendar</a>
-
+  </div>
  <% }); %>
 
 </script>
@@ -37,6 +38,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Charleston"){ %>
+  <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
@@ -44,6 +46,7 @@
     <li> <%= element.venue.name %> </li>
    </ul>
    <button>Add to Calendar</button>
+  </div>
  <% } %>
 
 <% }); %>
@@ -52,6 +55,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Mount Pleasant"){ %>
+  <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
@@ -59,6 +63,7 @@
     <li> <%= element.venue.name %> </li>
    </ul>
    <button>Add to Calendar</button>
+  </div>
 
  <% } %>
 
@@ -68,6 +73,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "North Charleston"){ %>
+  <div class="container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= element.datetime %> </li>
@@ -75,6 +81,7 @@
     <li> <%= element.venue.name %> </li>
    </ul>
    <button>Add to Calendar</button>
+  </div>
 
  <% } %>
 
