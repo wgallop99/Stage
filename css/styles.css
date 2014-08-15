@@ -9,19 +9,42 @@ header {
   width: 100%;
   position: relative;
   text-align: center;
-  height: 450px;
+  height: 430px;
   box-shadow: 0 5px 6px -6px grey; }
+  header #menu {
+    position: relative; }
+    header #menu img {
+      position: absolute;
+      top: -37px;
+      right: 100px; }
+    header #menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: 200;
+      font-size: 20px;
+      position: absolute;
+      top: 30px;
+      right: 30px; }
+    header #menu a:hover {
+      text-decoration: underline; }
   header .topNav {
-    text-align: center; }
+    position: absolute;
+    top: -220px;
+    right: 140px;
+    width: 200px;
+    float: right;
+    transition: all 1s ease;
+    background-color: #7f7f7f; }
     header .topNav ul {
       margin: 0;
       list-style-type: none;
-      width: 100%; }
+      padding: 0; }
     header .topNav li {
-      display: inline-block;
-      padding-top: 25px;
-      padding-left: 80px;
-      padding-right: 80px; }
+      text-align: center;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: 1px solid #e4e4e4; }
     header .topNav a {
       text-decoration: none;
       color: white;
@@ -30,7 +53,15 @@ header {
     header .topNav a:hover {
       text-decoration: underline; }
   header img {
+    padding-top: 60px;
     width: 300px; }
+
+header .topNav2 {
+  position: absolute;
+  top: 0;
+  transform: translateY(0px);
+  transition: all 1s ease;
+  top: 0px; }
 
 .container {
   width: 980px;
@@ -95,6 +126,42 @@ aside {
   aside li {
     font-weight: 200; }
 
+.eventsCal {
+  width: 980px;
+  margin: auto; }
+  .eventsCal .leftSide {
+    padding-left: 30px;
+    padding-top: 30px;
+    width: 68%;
+    float: left;
+    background-color: white;
+    color: #7f7f7f; }
+
+.navBar a {
+  color: #7f7f7f;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none; }
+.navBar .activeLink {
+  border-top: 1px solid #4298b5;
+  border-left: 1px solid #4298b5;
+  border-right: 1px solid #4298b5;
+  border-bottom: none;
+  margin-bottom: -1px;
+  background-color: #4298b5; }
+  .navBar .activeLink a {
+    color: white; }
+.navBar ul {
+  list-style-type: none;
+  padding: 0; }
+.navBar li {
+  display: inline-block;
+  padding: 12px;
+  margin-right: -5px;
+  border-bottom: 1px solid #4298b5; }
+
 .eventDisplay .event_container {
   margin-bottom: 25px; }
 .eventDisplay h3 {
@@ -131,6 +198,23 @@ aside {
     padding-bottom: 50px;
     font-size: 13px; }
 
+.calendar table {
+  background-color: white; }
+.calendar tr {
+  color: grey; }
+.calendar tr:hover {
+  color: black;
+  cursor: default; }
+.calendar td, .calendar th {
+  width: 10%; }
+.calendar td:hover, .calendar th:hover {
+  background-color: #4298b5; }
+.calendar td:hover {
+  color: black; }
+.calendar .days td, .calendar .days th {
+  padding-bottom: 50px;
+  font-size: 13px; }
+
 .main, .eventsCal, .getStaged {
   display: none; }
 
@@ -160,20 +244,3 @@ footer {
       transition: all 1s ease; }
     footer li a:hover {
       color: white; }
-
-.calendar table {
-  background-color: white; }
-.calendar tr {
-  color: grey; }
-.calendar tr:hover {
-  color: black;
-  cursor: default; }
-.calendar td, .calendar th {
-  width: 10%; }
-.calendar td:hover, .calendar th:hover {
-  background-color: #4298b5; }
-.calendar td:hover {
-  color: black; }
-.calendar .days td, .calendar .days th {
-  padding-bottom: 50px;
-  font-size: 13px; }

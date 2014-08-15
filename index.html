@@ -6,7 +6,6 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <title>Stage</title>
 
-<!--  COMMENTED OUT TEMPLATE FOR POTENTIAL SIDEBAR CONTENT (??)-->
 <script type="template/html" id="eventSideTmpl">
   <% _.each(event_data, function (element,index,list){ %>
     <% if(moment(element.datetime).utc().format().substring(0,10) == moment.utc().format().substring(0,10)) { %>
@@ -25,7 +24,7 @@
   <div class="event_container"><span></span>
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
-      <li> <%= element.datetime %> </li>
+      <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
       <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
       <li> <%= element.venue.name %> </li>
      </ul>
@@ -41,7 +40,7 @@
   <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
-    <li> <%= element.datetime %> </li>
+    <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
@@ -58,7 +57,7 @@
   <div class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
-    <li> <%= element.datetime %> </li>
+    <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
@@ -76,7 +75,7 @@
   <div class="container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
-    <li> <%= element.datetime %> </li>
+    <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
     <li> <%= element.venue.city %>, <%= element.venue.region %> </li>
     <li> <%= element.venue.name %> </li>
    </ul>
@@ -93,6 +92,7 @@
 
 
   <header>
+    <div id="menu"><img style="width: 20px;" src="images/micIconWhite.png" alt=""><a href="">MENU</a></div>
     <nav class="topNav">
     <ul>
       <li><a rel="main" href="">HOME</a></li>
@@ -152,6 +152,28 @@
   </div>
 
     <div class="eventsCal">
+
+     <div id="bigContain">
+      <div class="leftSide">
+
+      <div class="navBar">
+        <ul>
+          <li><a rel="alltab" href="">All</a></li>
+          <li><a rel="charlestonTab" href="">Charleston</a></li>
+          <li><a rel="mountPTab" href="">Mount Pleasant</a></li>
+          <li><a rel="nCharlesTab" href="">North Charleston</a></li>
+        </ul>
+      </div>
+
+      <div class="eventDisplay">
+        <div class="alltab activeTab"></div>
+        <div class="charlestonTab"></div>
+        <div class="mountPTab"></div>
+        <div class="nCharlesTab"></div>
+       </div>
+
+     </div>
+   </div>
      <div class="calendar">
        <table border="4" style="width: 1020px">
        <tr>
@@ -219,44 +241,23 @@
        </tr>
        </table>
      </div>
-     <div id="bigContain">
-      <div class="navBar">
-       <a rel="alltab" href="">All</a>
-       <a rel="charlestonTab" href="">Charleston</a>
-       <a rel="mountPTab" href="">Mount Pleasant</a>
-       <a rel="nCharlesTab" href="">North Charleston</a>
-      </div>
-
-       <div class="eventDisplay">
-        <div class="alltab activeTab"></div>
-        <div class="charlestonTab"></div>
-        <div class="mountPTab"></div>
-        <div class="nCharlesTab"></div>
-
-       </div>
-     </div>
-  </div>
-    <div class="getStaged">
 
 
-<h1>Get Staged</h1>
 
-  <h2>fill it out</h2>
 
-    <form class="getStagedForm" action="index.html" method="post">
-      <input type="text" name="bandName"><br>Band Name<br>
-      <input type="text" name="bandWebsite"><br>Band Website<br>
-      <input type="text" name="eventDate"><br>Event Date<br>
-      <input type="text" name="eventTime"><br>Even Time<br>
-      <input type="text" name="eventVenue"><br>Venue<br>
-      <input type="text" name="buyTickets"><br>Link to Purchase Tickets<br>
-      <button type="submit" value="">Submit</button>
-    </form>
 
-<script type="text/javascript" src="node_modules/moment/moment.js"></script>
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
-<script type="text/javascript" src="getStaged.js"></script>
+  <div class="getStaged">
+    <h1>Get Staged</h1>
+    <h2>fill it out</h2>
+      <form class="getStagedForm" action="index.html" method="post">
+        <input type="text" name="bandName"><br>Band Name<br>
+        <input type="text" name="bandWebsite"><br>Band Website<br>
+        <input type="text" name="eventDate"><br>Event Date<br>
+        <input type="text" name="eventTime"><br>Even Time<br>
+        <input type="text" name="eventVenue"><br>Venue<br>
+        <input type="text" name="buyTickets"><br>Link to Purchase Tickets<br>
+        <button type="submit" value="">Submit</button>
+      </form>
   </div>
 
   </div>
