@@ -166,7 +166,7 @@ aside{
   .leftSide{
     padding-left: 30px;
     padding-top: 30px;
-    width: 68%;
+    width: 55%;
     float: left;
     background-color: white;
     color: $greyText;
@@ -249,15 +249,12 @@ aside{
 
 }
 
-
-
-
 .calendar {
   background-color: white;
+
   td, th {
     width: 10%;
   }
-
   .days td, .days th {
     padding-bottom: 50px;
     font-size: 13px;
