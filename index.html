@@ -21,7 +21,7 @@
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
   <div data-index="<%= index %>" class="event_container">
-
+  <div class="event_container">
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
       <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
@@ -37,7 +37,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Charleston"){ %>
-  <div class="event_container">
+  <div data-index="<%= index %>" class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
@@ -54,7 +54,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "Mount Pleasant"){ %>
-  <div class="event_container">
+  <div data-index="<%= index %>" class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
@@ -72,7 +72,7 @@
  <% _.each(event_data, function (element,index,list){ %>
 
  <% if(element.venue.city === "North Charleston"){ %>
-  <div class="container">
+  <div data-index="<%= index %>" class="event_container">
    <ul>
     <li><h3> <%= element.artists[0].name %> </h3></li>
     <li> <%= moment(element.datetime).utc().format('MMM DD, YYYY')%> at <%=moment(element.datetime).utc().format('hh:mm a')%> </li>
