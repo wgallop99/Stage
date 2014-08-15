@@ -74,7 +74,10 @@ $(document).ready(function() {
     $(".alltab").on("click", ".event_container a", function(e){
       e.preventDefault();
       var info = $(this).closest(".event_container").data("index");
+      console.log(info);
       var event = event_data[info];
+      console.log(event);
+
       var date = moment(event.datetime).utc().format('DD');
       var band = event.artists[0].name;
       var venue = event.venue.name;
