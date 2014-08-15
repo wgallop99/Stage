@@ -65,11 +65,28 @@ $(document).ready(function() {
       $(this).closest('li').addClass("activeLink");
       $(this).closest('li').siblings().removeClass("activeLink");
     });
+
     $("#menu a").on("click", function(event){
       event.preventDefault();
       $(".topNav").toggleClass("topNav2");
     });
 
+    $(".alltab").on("click", ".event_container a", function(e){
+      e.preventDefault();
+      var info = $(this).closest(".event_container").data("index");
+      var event = event_data[info];
+      var date = moment(event.datetime).utc().format('DD');
+      var band = event.artists[0].name;
+      var venue = event.venue.name;
+      var time = moment(event.datetime).utc().format('hh:mm a')
+      for(var i=1; i<=31; i++){
+        if(date == i){
+          console.log(date);
+          var numI = i.toString();
+          $(".calendar #" + numI).append(" " + band + " ");
+        }
+      }
+    });
 
 
 home.init();
