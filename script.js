@@ -71,7 +71,7 @@ $(document).ready(function() {
       $(".topNav").toggleClass("topNav2");
     });
 
-    $(".alltab").on("click", ".event_container a", function(e){
+    $(".eventDisplay").on("click", ".event_container a", function(e){
       e.preventDefault();
       var info = $(this).closest(".event_container").data("index");
       console.log(info);
@@ -86,7 +86,7 @@ $(document).ready(function() {
         if(date == i){
           console.log(date);
           var numI = i.toString();
-          $(".calendar #" + numI).append(" " + band + " ");
+          $(".calendar #" + numI).append(" " + band + " at " + venue + " " + time + " ");
         }
       }
     });
