@@ -16,7 +16,10 @@ $(document).ready(function() {
         home.renderTextnCharTab($(".nCharlesTab"));
       },
 
-      initEvents: function() {},
+      initEvents: function() {
+
+
+      },
 
 
       render: function(template, data, $target) {
@@ -89,6 +92,20 @@ $(document).ready(function() {
           $(".calendar #" + numI).append(" " + band + " at " + venue + " " + time + " ");
         }
       }
+    });
+
+    $(window).scroll(function(event) {
+      //what is the y position of what the scroll is
+      var y = $(window).scrollTop();
+
+    if (y >= 430) {
+
+      $('.calendar').addClass('fixed');
+
+    } else {
+      $('.calendar').removeClass('fixed');
+
+    }
     });
 
 

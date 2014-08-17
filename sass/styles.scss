@@ -9,7 +9,6 @@ body{
   background-image: url(../images/pyramid.png);
   background-attachment: fixed;
 }
-
 header{
   background-image: url(../images/stageBkg.png);
   width: 100%;
@@ -252,27 +251,21 @@ aside{
   margin-left: 0px;
 }
 
+}
 
+.cal_wrapper {
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: -66px;
+  width: 47%;
 }
 
 .calendar {
   background-color: white;
 
-  td, th {
-    width: 10%;
-  }
-  .days td, .days th {
-    padding-bottom: 50px;
-    font-size: 13px;
-  }
-
-}
-
-
-.calendar {
-
   table {
-    background-color: white;
+    width: 100%;
   }
 
   tr {
@@ -294,15 +287,21 @@ aside{
 
   td:hover {
     color: black;
-
   }
 
   .days td, .days th {
     padding-bottom: 50px;
     font-size: 13px;
   }
-
 }
+
+.calendar.fixed {
+  position: fixed;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 17px;
+}
+
 
 /////////////////////////////
 /////////////////////////////

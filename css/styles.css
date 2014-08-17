@@ -195,30 +195,37 @@ aside {
   border-bottom: 1px solid;
   margin-left: 0px; }
 
+.cal_wrapper {
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: -66px;
+  width: 47%; }
+
 .calendar {
   background-color: white; }
+  .calendar table {
+    width: 100%; }
+  .calendar tr {
+    color: grey; }
+  .calendar tr:hover {
+    color: black;
+    cursor: default; }
   .calendar td, .calendar th {
     width: 10%; }
+  .calendar td:hover, .calendar th:hover {
+    background-color: #4298b5; }
+  .calendar td:hover {
+    color: black; }
   .calendar .days td, .calendar .days th {
     padding-bottom: 50px;
     font-size: 13px; }
 
-.calendar table {
-  background-color: white; }
-.calendar tr {
-  color: grey; }
-.calendar tr:hover {
-  color: black;
-  cursor: default; }
-.calendar td, .calendar th {
-  width: 10%; }
-.calendar td:hover, .calendar th:hover {
-  background-color: #4298b5; }
-.calendar td:hover {
-  color: black; }
-.calendar .days td, .calendar .days th {
-  padding-bottom: 50px;
-  font-size: 13px; }
+.calendar.fixed {
+  position: fixed;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 17px; }
 
 .main, .eventsCal, .getStaged {
   display: none; }
