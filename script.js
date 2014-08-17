@@ -98,7 +98,7 @@ $(document).ready(function() {
       //what is the y position of what the scroll is
       var y = $(window).scrollTop();
 
-    if (y >= 448) {
+    if (y >= 430) {
 
       $('.calendar').addClass('fixed');
 
