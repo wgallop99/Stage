@@ -239,14 +239,17 @@ footer {
   clear: both;
   text-align: center; }
   footer ul {
-    padding: 0px; }
+    padding-top: 50px; }
   footer li {
     display: inline-block;
-    padding-right: 15px;
-    padding-left: 15px; }
+    padding-right: 50px;
+    padding-left: 50px; }
     footer li a {
       text-decoration: none;
       color: black;
       transition: all 1s ease; }
+      footer li a img {
+        height: 60px;
+        width: 60px; }
     footer li a:hover {
       color: white; }
