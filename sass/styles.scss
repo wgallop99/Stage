@@ -335,17 +335,22 @@ footer{
   clear: both;
   text-align: center;
   ul{
-    padding: 0px;
+    padding-top: 50px;
   }
   li {
     display: inline-block;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
 
     a {
       text-decoration: none;
       color: black;
       transition: all 1s ease;
+
+      img{
+       height:60px;
+       width:60px;
+      }
     }
 
     a:hover {
