@@ -195,16 +195,12 @@ aside {
   border-bottom: 1px solid;
   margin-left: 0px; }
 
-.calendar {
-  background-color: white; }
-  .calendar td, .calendar th {
-    width: 10%; }
-  .calendar .days td, .calendar .days th {
-    padding-bottom: 50px;
-    font-size: 13px; }
-
 .calendar table {
-  background-color: white; }
+  background-color: white;
+  width: 42%;
+  position: absolute;
+  top: 19px;
+  right: -15px; }
 .calendar tr {
   color: grey; }
 .calendar tr:hover {
@@ -219,6 +215,10 @@ aside {
 .calendar .days td, .calendar .days th {
   padding-bottom: 50px;
   font-size: 13px; }
+
+.fixed {
+  width: 42%;
+  position: fixed; }
 
 .main, .eventsCal, .getStaged {
   display: none; }

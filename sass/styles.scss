@@ -8,7 +8,7 @@ body{
   font-family: 'Raleway';
   background-image: url(../images/pyramid.png);
   background-attachment: fixed;
-
+}
 header{
   background-image: url(../images/stageBkg.png);
   width: 100%;
@@ -251,20 +251,6 @@ aside{
   margin-left: 0px;
 }
 
-
-}
-
-.calendar {
-  background-color: white;
-
-  td, th {
-    width: 10%;
-  }
-  .days td, .days th {
-    padding-bottom: 50px;
-    font-size: 13px;
-  }
-
 }
 
 
@@ -272,6 +258,10 @@ aside{
 
   table {
     background-color: white;
+    width: 42%;
+    position: absolute;
+    top: 19px;
+    right: -15px;
   }
 
   tr {
@@ -293,14 +283,17 @@ aside{
 
   td:hover {
     color: black;
-
   }
 
   .days td, .days th {
     padding-bottom: 50px;
     font-size: 13px;
   }
+}
 
+.fixed {
+  width: 42%;
+  position: fixed;
 }
 
 /////////////////////////////

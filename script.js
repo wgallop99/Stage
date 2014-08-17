@@ -16,7 +16,28 @@ $(document).ready(function() {
         home.renderTextnCharTab($(".nCharlesTab"));
       },
 
-      initEvents: function() {},
+      initEvents: function() {
+
+        var top = $('table').offset().top;
+
+        $(window).scroll(function() {
+          console.log('scroll');
+          //what is the y position of what the scroll is
+          var y = $(window).scrollTop();
+
+          //if so, add the fixed class.
+
+          if (y >= top) {
+
+          $('table').addClass('fixed');
+
+        } else {
+          $('table').removeClass('fixed');
+
+        }
+
+        });
+      },
 
 
       render: function(template, data, $target) {
