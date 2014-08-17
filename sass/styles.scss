@@ -253,15 +253,19 @@ aside{
 
 }
 
+.cal_wrapper {
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: -66px;
+  width: 47%;
+}
 
 .calendar {
+  background-color: white;
 
   table {
-    background-color: white;
-    width: 42%;
-    position: absolute;
-    top: 19px;
-    right: -15px;
+    width: 100%;
   }
 
   tr {
@@ -291,10 +295,12 @@ aside{
   }
 }
 
-.fixed {
-  width: 42%;
+.calendar.fixed {
   position: fixed;
+  top: 0;
+  margin-right: 10px;
 }
+
 
 /////////////////////////////
 /////////////////////////////

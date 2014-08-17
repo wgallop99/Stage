@@ -18,25 +18,7 @@ $(document).ready(function() {
 
       initEvents: function() {
 
-        var top = $('table').offset().top;
 
-        $(window).scroll(function() {
-          console.log('scroll');
-          //what is the y position of what the scroll is
-          var y = $(window).scrollTop();
-
-          //if so, add the fixed class.
-
-          if (y >= top) {
-
-          $('table').addClass('fixed');
-
-        } else {
-          $('table').removeClass('fixed');
-
-        }
-
-        });
       },
 
 
@@ -110,6 +92,20 @@ $(document).ready(function() {
           $(".calendar #" + numI).append(" " + band + " at " + venue + " " + time + " ");
         }
       }
+    });
+
+    $(window).scroll(function(event) {
+      //what is the y position of what the scroll is
+      var y = $(window).scrollTop();
+
+    if (y >= 448) {
+
+      $('.calendar').addClass('fixed');
+
+    } else {
+      $('.calendar').removeClass('fixed');
+
+    }
     });
 
 
