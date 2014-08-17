@@ -44,7 +44,7 @@ header{
     right: 140px;
     width: 200px;
     float: right;
-    transition: all 1s ease;
+    transition: all .8s ease;
     background-color: $greyText;
 
     ul{
@@ -79,7 +79,7 @@ header{
     position: absolute;
     top:0;
     transform: translateY(0px);
-    transition: all 1s ease;
+    transition: all .8s ease;
     top: 0px;
   }
 }
@@ -228,6 +228,7 @@ aside{
   }
 
   a {
+    text-decoration: none;
     margin: 5px;
     color: white;
     cursor: pointer;
