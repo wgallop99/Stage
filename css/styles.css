@@ -280,7 +280,16 @@ aside {
 .eventDisplay .activeTab {
   display: block; }
 
+<<<<<<< HEAD
 footer div {
   margin-top: 100px;
   height: 10px;
   width: 100%; }
+=======
+footer {
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 120px; }
+>>>>>>> 486725f6dbe6ad29cef98d5f395a2ebdf589827b
