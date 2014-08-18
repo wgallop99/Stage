@@ -6,6 +6,14 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <title>Stage</title>
 
+<script>
+      navigator.geolocation.getCurrentPosition(function(position){
+       var lat = position.coords.latitude;
+       var long = position.coords.longitude;
+       window.lat = lat;
+       window.long = long;
+     });
+</script>
 <script type="template/html" id="eventSideTmpl">
   <% _.each(event_data, function (element,index,list){ %>
     <% if(moment(element.datetime).utc().format().substring(0,10) == moment.utc().format().substring(0,10)) { %>
@@ -21,6 +29,7 @@
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
   <div data-index="<%= index %>" class="event_container">
+
     <a class="action-button animate border" href="#">Add to Calendar</a>
      <ul>
       <li><h3> <%= element.artists[0].name %> </h3></li>
@@ -96,7 +105,6 @@
     <ul>
       <li><a rel="main" href="">HOME</a></li>
       <li><a rel="eventsCal" href="">EVENTS</a></li>
-      <li><a href="register.html">LOGIN</a></li>
       <li><a rel="getStaged" href="">GET STAGED</a></li>
     </ul>
     </nav>
@@ -138,12 +146,9 @@
 
 
         <aside>
+        <h2><span style="color: #4298b5; letter-spacing:-5px;">>></span> ON STAGE TONIGHT</h2>
 
           <div class="tonightEvents">
-
-            <h2><span style="color: #4298b5; letter-spacing:-5px;">>></span> ON STAGE TONIGHT</h2>
-
-
           </div>
 
         </aside>
@@ -241,22 +246,113 @@
        </table>
      </div>
    </div>
+</div>
 
   <div class="getStaged">
-    <h1>Get Staged</h1>
-    <h2>fill it out</h2>
+    <h1>GET STAGED</h1>
       <form class="getStagedForm" action="index.html" method="post">
-        <input type="text" name="bandName"><br>Band Name<br>
-        <input type="text" name="bandWebsite"><br>Band Website<br>
-        <input type="text" name="eventDate"><br>Event Date<br>
-        <input type="text" name="eventTime"><br>Even Time<br>
-        <input type="text" name="eventVenue"><br>Venue<br>
-        <input type="text" name="buyTickets"><br>Link to Purchase Tickets<br>
-        <button type="submit" value="  ">Submit</button>
+
+        <label for="getBandName">BAND NAME:</label>
+        <input id="getBandName" type="text" name="bandName"><br><br>
+
+        <label for="getDate">EVENT DATE:</label>
+        <select name="" id="getMonth">
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <select name="" id="getDay">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+
+        <br><br>
+
+        <label for="getTime">EVENT TIME:</label>
+        <select name="" id="getTime">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <select name="" id="getTod">
+          <option value="am">AM</option>
+          <option value="pm">PM</option>
+        </select>
+
+        <br><br>
+
+        <label for="getTime">AREA:</label>
+        <select name="" id="getCity">
+          <option value="Charleston">Charleston</option>
+          <option value="Mount Pleasant">Mt. Pleasant</option>
+          <option value="North Charleston">North Charleston</option>
+        </select>
+
+        <br><br>
+
+        <label for="getVenue">VENUE:</label>
+        <input id="getVenue" type="text" name="eventVenue">
+
+        <br><br>
+
+
+
+        <label for="getAddr">VENUE ADDRESS:</label>
+        <input id="getAddr" type="text" name="buyTickets"><br><br>
+
+        <button type="submit" value="submit">SUBMIT</button>
       </form>
-  </div>
 
   </div>
+
+
 
 </div>
 
@@ -269,8 +365,6 @@
       <li><a href=""><img style="width: 28px; height: 28px;" src="images/twitter-icon.png" alt=""></a></li>
       <li><a href=""><img style="width: 28px; height: 28px;" src="images/YouTube-icon-full_color.png" alt=""></a></li>
     </ul>
-
-
   </footer>
 
 <script type="text/javascript" src="node_modules/moment/moment.js"></script>
