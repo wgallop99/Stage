@@ -196,14 +196,6 @@ aside {
   border-bottom: 1px solid;
   margin-left: 0px; }
 
-.calendar {
-  background-color: white; }
-  .calendar td, .calendar th {
-    width: 10%; }
-  .calendar .days td, .calendar .days th {
-    padding-bottom: 50px;
-    font-size: 13px; }
-
 .calendar table {
   background-color: white; }
 .calendar tr {
@@ -220,6 +212,20 @@ aside {
 .calendar .days td, .calendar .days th {
   padding-bottom: 50px;
   font-size: 13px; }
+.calendar p {
+  margin: 0px; }
+.calendar span.mic {
+  display: block;
+  position: relative; }
+.calendar span.drop {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  background-color: white;
+  border: 1px solid #e4e4e4; }
+.calendar span.drop.hidden {
+  display: none; }
 
 .main, .eventsCal, .getStaged {
   display: none; }

@@ -50,6 +50,7 @@ $(document).ready(function() {
       },
     }
 
+///TOGGLES THE MAIN PAGES///
     $(".topNav a").on("click", function(event){
       event.preventDefault();
       var navigated = "." + $(this).attr("rel");
@@ -57,6 +58,8 @@ $(document).ready(function() {
       $(navigated).addClass("currentTab");
     });
 
+
+///TOGGLES THE EVENTS PAGE LOCATION TABS///
     $(".navBar a").on("click", function(event){
       event.preventDefault();
       var navigated = "." + $(this).attr("rel");
@@ -66,30 +69,39 @@ $(document).ready(function() {
       $(this).closest('li').siblings().removeClass("activeLink");
     });
 
+///TOGGLES THE SCROLL DOWN NAV BAR///
     $("#menu a").on("click", function(event){
       event.preventDefault();
       $(".topNav").toggleClass("topNav2");
     });
 
+
     $(".eventDisplay").on("click", ".event_container a", function(e){
       e.preventDefault();
       var info = $(this).closest(".event_container").data("index");
-      console.log(info);
       var event = event_data[info];
-      console.log(event);
-
       var date = moment(event.datetime).utc().format('DD');
       var band = event.artists[0].name;
       var venue = event.venue.name;
       var time = moment(event.datetime).utc().format('hh:mm a')
       for(var i=1; i<=31; i++){
         if(date == i){
-          console.log(date);
           var numI = i.toString();
-          $(".calendar #" + numI).append(" " + band + " at " + venue + " " + time + " ");
+          var icon = "<span class=\"mic\"" + "title=\"band info\">" + "<img style=\"width:18px;\"" + "src=\"images/micIcon.png\"" + "alt=\"mic\"" + ">"
+                    + "<span class=\"drop hidden\"" + "style=\"width:50px; font-size: 10px; padding: 5px;\">" + band + " at " + venue + " " + time + "</span>"
+                    + "</span>";
+          $(".calendar #" + numI).append(icon);
+          $(".calendar .mic").on("mouseenter", function(event){
+            $(".drop").removeClass("hidden");
+            $(".drop").closest('td').siblings().children().closest(".mic").addClass("hidden");
+          });
+          $(".calendar .mic").on("mouseleave", this, function(event){
+            $(".drop").addClass("hidden");
+          });
         }
       }
     });
+
 
 
 home.init();
