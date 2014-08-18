@@ -207,15 +207,12 @@ aside {
 
 .cal_wrapper {
   background-color: white;
-  position: absolute;
-  top: 20px;
-  right: -37px;
-  width: 48%; }
+  float: right;
+  width: 43%; }
 
 .calendar {
-  background-color: white; }
-  .calendar table {
-    width: 100%; }
+  background-color: white;
+  width: 420px; }
   .calendar tr {
     color: grey; }
   .calendar tr:hover {
