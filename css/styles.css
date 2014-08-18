@@ -255,7 +255,8 @@ aside {
   position: absolute;
   top: 0px;
   left: 0px;
-  margin-top: 19px; }
+  margin-top: 19px;
+  margin-bottom: 50px; }
 
 #calendar_icon {
   height: 64px;
@@ -279,23 +280,7 @@ aside {
 .eventDisplay .activeTab {
   display: block; }
 
-footer {
-  position: relative;
-  display: block;
-  clear: both;
-  text-align: center; }
-  footer ul {
-    padding-top: 50px; }
-  footer li {
-    display: inline-block;
-    padding-right: 50px;
-    padding-left: 50px; }
-    footer li a {
-      text-decoration: none;
-      color: black;
-      transition: all 1s ease; }
-      footer li a img {
-        height: 60px;
-        width: 60px; }
-    footer li a:hover {
-      color: white; }
+footer div {
+  margin-top: 100px;
+  height: 10px;
+  width: 100%; }
