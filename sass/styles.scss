@@ -266,14 +266,13 @@ aside{
 
 .cal_wrapper {
   background-color: white;
-  position: absolute;
-  top: 20px;
-  right: -37px;
-  width: 48%;
+  float: right;
+  width: 43%;
 }
 
 .calendar {
   background-color: white;
+  width: 420px;
 
   tr {
     color: grey;
