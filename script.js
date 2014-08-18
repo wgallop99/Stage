@@ -105,18 +105,33 @@ $(document).ready(function() {
       }
     });
 
+
     $(window).scroll(function(event) {
       //what is the y position of what the scroll is
-      var y = $(window).scrollTop();
+    var y = $(window).scrollTop();
 
     if (y >= 430) {
 
       $('.calendar').addClass('fixed');
 
-    } else {
+    } else{
       $('.calendar').removeClass('fixed');
 
     }
+    });
+
+    $('.calendar').click(function() {
+      $(this).addClass('expand');
+      $('.leftSide').css('display', 'none');
+      $('table').css('width', '100%');
+      $('#calendar_icon').css('display', 'inline');
+    });
+
+    $('#calendar_icon').click(function(){
+      $('.calendar').removeClass('expand');
+      $('.leftSide').css('display', 'inline-block');
+      $('table').css('width', 'none');
+      $('#calendar_icon').css('display', 'none');
     });
 
 
