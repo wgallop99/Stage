@@ -246,8 +246,26 @@ aside {
   position: fixed;
   top: 0;
   margin-right: 25px;
-  margin-top: 19px;
-  width: 37%; }
+  margin-top: 19px; }
+
+.calendar.expand {
+  width: 100%;
+  display: block;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 19px; }
+
+#calendar_icon {
+  height: 64px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 1px;
+  right: -43px;
+  display: none;
+  cursor: pointer; }
 
 .main, .eventsCal, .getStaged {
   display: none; }
