@@ -213,9 +213,8 @@ aside {
   width: 48%; }
 
 .calendar {
-  background-color: white; }
-  .calendar table {
-    width: 100%; }
+  background-color: white;
+  width: 100%; }
   .calendar tr {
     color: grey; }
   .calendar tr:hover {
@@ -249,7 +248,8 @@ aside {
   position: fixed;
   top: 0;
   margin-right: 25px;
-  margin-top: 19px; }
+  margin-top: 19px;
+  width: 37%; }
 
 .main, .eventsCal, .getStaged {
   display: none; }
