@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
   var home = {
 
@@ -24,7 +25,7 @@ $(document).ready(function() {
 
       render: function(template, data, $target) {
           var tmpl = _.template(template, data);
-          $target.append(tmpl);
+          $target.html(tmpl);
       },
 
 
@@ -95,9 +96,9 @@ $(document).ready(function() {
                     + "</span>";
           $(".calendar #" + numI).append(icon);
           $(".calendar .mic").on("mouseenter", function(event){
-            $(".drop").removeClass("hidden");
-            $(".drop").closest('td').siblings().children().closest(".mic").addClass("hidden");
+            $(".drop").removeClass("hidden");           $(".drop").closest('td').siblings().children().closest(".mic").addClass("hidden");
           });
+
           $(".calendar .mic").on("mouseleave", this, function(event){
             $(".drop").addClass("hidden");
           });
@@ -133,6 +134,61 @@ $(document).ready(function() {
       $('table').css('width', 'none');
       $('#calendar_icon').css('display', 'none');
     });
+
+
+
+
+
+
+//////////FUNCTION FOR APPENDING FORM INFO TO DATA ARRAY///////////
+    $(".getStaged form").on("click", "button", function(e){
+      e.preventDefault();
+      var newEvent= {};
+
+      var bandName = $("#getBandName").val();
+
+      var eventDate = "2014-"+$("#getMonth").val()+"-"+$("#getDay").val();
+
+      var eventTime = "";
+      if($("#getTime").val() < 12 && $("#getTod").val() == "pm"){
+        eventTime = "T"+(Number($("#getTime").val()) + 12) + ":00:00";
+
+      }else if($("#getTime").val() < 12 && $("#getTod").val() == "am"){
+        eventTime = "T"+$("#getTime").val() + ":00:00";
+
+      }else if($("#getTime").val() == 12 && $("#getTod").val() == "am"){
+        eventTime = "T"+"00:00:00"
+
+      }else if($("#getTime").val() == 12 && $("#getTod").val() == "pm"){
+        eventTime = "T"+"12:00:00"
+      }
+
+
+      var eventVen = $("#getVenue").val();
+      var eventCity = $("#getCity").val();
+      var eventAddr = $("#getAddr").val();
+
+
+      newEvent = {
+        "artists":[
+          {
+            "name":bandName
+          }
+         ],
+         "datetime":eventDate + eventTime,
+         "venue":{
+         "region": "SC",
+         "city": eventCity,
+         "name": eventVen
+      }
+
+    };
+    event_data.unshift(newEvent);
+
+    home.renderEventDisplay($(".alltab"));
+
+});
+
 
 
 
