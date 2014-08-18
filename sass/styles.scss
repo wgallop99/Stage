@@ -43,7 +43,7 @@ header{
     right: 140px;
     width: 200px;
     float: right;
-    transition: all .8s ease;
+    transition: all .5s ease;
     background-color: $greyText;
 
     ul{
@@ -78,7 +78,7 @@ header{
     position: absolute;
     top:0;
     transform: translateY(0px);
-    transition: all .8s ease;
+    transition: all .5s ease;
     top: 0px;
   }
 }
@@ -169,13 +169,16 @@ aside{
   width: 980px;
   margin: auto;
 
+
   .leftSide{
-    padding-left: 30px;
+    padding-left: 15px;
     padding-top: 30px;
-    width: 55%;
+    padding-right: 10px;
+    width: 53%;
     float: left;
     background-color: white;
     color: $greyText;
+    border: 1px solid $borderColor;
   }
 }
 .navBar {
@@ -186,6 +189,7 @@ aside{
     padding-top: 8px;
     padding-bottom: 8px;
     text-decoration: none;
+    font-size: 18px;
   }
   .activeLink{
     border-top: 1px solid $blueText;
@@ -204,15 +208,19 @@ aside{
   }
   li{
     display: inline-block;
-    padding: 12px;
+    padding: 5px;
     margin-right: -5px;
     border-bottom: 1px solid $blueText;
   }
 }
 
 .eventDisplay {
+  padding-left: 35px;
+  padding-right: 35px;
   .event_container {
-    margin-bottom: 25px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-bottom: 1px solid $borderColor;
   }
 
   h3 {
@@ -227,6 +235,7 @@ aside{
   }
 
   a {
+    float: right;
     text-decoration: none;
     margin: 5px;
     color: white;
@@ -259,8 +268,8 @@ aside{
   background-color: white;
   position: absolute;
   top: 20px;
-  right: -66px;
-  width: 47%;
+  right: -37px;
+  width: 48%;
 }
 
 .calendar {
@@ -322,7 +331,7 @@ aside{
 .calendar.fixed {
   position: fixed;
   top: 0;
-  margin-right: 10px;
+  margin-right: 25px;
   margin-top: 19px;
 }
 
