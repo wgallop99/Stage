@@ -33,7 +33,7 @@ header {
     right: 140px;
     width: 200px;
     float: right;
-    transition: all 0.8s ease;
+    transition: all 0.5s ease;
     background-color: #7f7f7f; }
     header .topNav ul {
       margin: 0;
@@ -60,7 +60,7 @@ header .topNav2 {
   position: absolute;
   top: 0;
   transform: translateY(0px);
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
   top: 0px; }
 
 .container {
@@ -135,9 +135,10 @@ aside {
   width: 980px;
   margin: auto; }
   .eventsCal .leftSide {
-    padding-left: 30px;
+    padding-left: 15px;
     padding-top: 30px;
-    width: 55%;
+    padding-right: 10px;
+    width: 53%;
     float: left;
     background-color: white;
     color: #7f7f7f; }
@@ -148,7 +149,8 @@ aside {
   padding-left: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 18px; }
 .navBar .activeLink {
   border-top: 1px solid #4298b5;
   border-left: 1px solid #4298b5;
@@ -163,45 +165,51 @@ aside {
   padding: 0; }
 .navBar li {
   display: inline-block;
-  padding: 12px;
+  padding: 5px;
   margin-right: -5px;
   border-bottom: 1px solid #4298b5; }
 
-.eventDisplay .event_container {
-  margin-bottom: 25px; }
-.eventDisplay h3 {
-  margin: 2px; }
-.eventDisplay ul {
-  margin: 0;
-  list-style-type: none;
-  padding: 0; }
-.eventDisplay a {
-  text-decoration: none;
-  margin: 5px;
-  color: white;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 4px;
-  font-size: 10px; }
-.eventDisplay .animate {
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s; }
-.eventDisplay .border {
-  background-color: #4298b5;
-  border-bottom: 5px solid #26596b;
-  margin: 0px; }
-.eventDisplay .action-button:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  border-bottom: 1px solid;
-  margin-left: 0px; }
+.eventDisplay {
+  padding-left: 35px;
+  padding-right: 35px; }
+  .eventDisplay .event_container {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-bottom: 1px solid #e4e4e4; }
+  .eventDisplay h3 {
+    margin: 2px; }
+  .eventDisplay ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0; }
+  .eventDisplay a {
+    float: right;
+    text-decoration: none;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 10px; }
+  .eventDisplay .animate {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s; }
+  .eventDisplay .border {
+    background-color: #4298b5;
+    border-bottom: 5px solid #26596b;
+    margin: 0px; }
+  .eventDisplay .action-button:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+    margin-left: 0px; }
 
 .cal_wrapper {
   background-color: white;
   position: absolute;
   top: 20px;
-  right: -66px;
-  width: 47%; }
+  right: -37px;
+  width: 48%; }
 
 .calendar {
   background-color: white; }
@@ -239,7 +247,7 @@ aside {
 .calendar.fixed {
   position: fixed;
   top: 0;
-  margin-right: 10px;
+  margin-right: 25px;
   margin-top: 19px; }
 
 .main, .eventsCal, .getStaged {
